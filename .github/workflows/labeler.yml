@@ -1,0 +1,22 @@
+name: "Pull Request Labeler"
+on:
+  - pull_request_target
+
+jobs:
+  pr-labeler:
+    permissions:
+      contents: read
+      pull-requests: write
+    runs-on: ubuntu-latest
+    if: github.event.action == 'opened' # Only run the action when the PR was first opened
+    steps:
+      - name: Label PRs
+        uses: actions/labeler@v4
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Label PRs by pr-branch-labeler
+        uses: TimonVS/pr-labeler-action@v4
+        with:
+          repo-token: ${{secrets.GITHUB_TOKEN}}
+          configuration-path: .github/pr-labeler.yml

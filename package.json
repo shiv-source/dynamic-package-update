@@ -1,0 +1,49 @@
+{
+  "name": "dynamic-package-update",
+  "version": "1.0.0",
+  "description": "A simple node.js module for dynamic updating packages list in the markdown file.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prettier:check": "prettier --config .prettierrc --check src/**/*{.ts,.json}",
+    "prettier:write": "prettier --config .prettierrc --write src/**/*{.ts,.json}",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shiv-source/dynamic-package-update.git"
+  },
+  "keywords": [
+    "nodejs",
+    "dynamic-package-update",
+    "dpu",
+    "typescript",
+    "readme",
+    "README.md",
+    "readme.md",
+    "markdown"
+  ],
+  "author": {
+    "name": "Shiv Kumar",
+    "url": "https://shivkumar.me/"
+  },
+  "bugs": {
+    "url": "https://github.com/shiv-source/dynamic-package-update/issues"
+  },
+  "homepage": "https://github.com/shiv-source/dynamic-package-update#readme",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.8.7",
+    "lint-staged": "^15.0.2",
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2",
+    "husky": "^8.0.0"
+  },
+  "lint-staged": {
+    "src/**/**": "npm run prettier:write"
+  },
+  "engines": {
+    "node": ">=10"
+  }
+}

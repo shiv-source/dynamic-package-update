@@ -1,0 +1,9 @@
+.github
+.husky
+node_modules
+src
+.gitignore
+.nvmrc
+.prettierignore
+.prettierrc
+tsconfig.json
