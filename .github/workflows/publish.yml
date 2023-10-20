@@ -6,6 +6,8 @@ name: Publish Package to npmjs
 on:
   push:
     branches: [master]
+    paths:
+      - "src/**"
 
 jobs:
   publish:
